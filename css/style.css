@@ -189,23 +189,16 @@ section {
 }
 button {
   background: transparent;
-  border: 1px solid #cb7d1f;
+  border: 2px solid #cb7d1f;
   border-radius: 5px;
   text-align: center;
   font-size: 13px;
   padding: 12px 16px;
 }
 button a {
-  color: #cb7d1f;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-button:hover {
   color: #141517;
-  background: #cb7d1f;
-}
-.fab {
-  color: #cb7d1f;
+  text-transform: capitalize;
+  font-weight: 200;
 }
 
 .center-align h2 {
@@ -217,6 +210,8 @@ button:hover {
 .page-header {
   height: 50px;
   max-width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .navigation {
@@ -247,11 +242,7 @@ img {
   column-gap: 20px;
 }
 .nav-link:hover {
-  /* background-color: #141517; */
-  background-color: #cb7d1f;
-  padding: 0.5rem 0.75rem;
-  border-radius: 4px;
-  color: #fff;
+  color: #cb7d1f;
 }
 .nav-link .active {
   color: #cb7d1f;
@@ -261,10 +252,10 @@ nav a {
 }
 a:hover,
 a:active {
-  color: #fff;
+  color: #cb7d1f;
 }
 .nav-toggle {
-  width: 50px;
+  width: 60px;
   background: none;
   border: none;
   display: none;
@@ -272,10 +263,10 @@ a:active {
 .toggle-line {
   display: block;
   width: 100%;
-  height: 6px;
+  height: 1px;
   background-color: #000;
   border-radius: 4px;
-  margin: 2px 0;
+  margin: 3px 0;
 }
 
 hr {
@@ -283,10 +274,7 @@ hr {
   border: none;
   background-color: #ccc;
 }
-.fas {
-  margin-right: 5px;
-  color: #cb7d1f;
-}
+
 /*============================================*/
 /*== HERO SECTION ==========================================*/
 /*============================================*/
@@ -393,7 +381,10 @@ hr {
 .skills-list li {
   padding: 10px 0;
 }
-
+.skills-list .fas {
+  margin-right: 5px;
+  color: #cb7d1f;
+}
 .joyce {
   width: 40%;
   overflow: hidden;
@@ -408,14 +399,6 @@ hr {
 /*============================================*/
 /*== MY WORK ==========================================*/
 /*============================================*/
-#work {
-  color: #000205;
-  /* background-color: #fffdfa; */
-}
-
-#work p {
-  color: #656563;
-}
 
 .project-grid {
   display: grid;
@@ -509,15 +492,31 @@ footer p {
 /*============================================*/
 /*== SERVICES PAGE ==========================================*/
 /*============================================*/
+#serviceBanner {
+  /* position: relative; */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/joyce-digital-services-banner.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#serviceBanner h1,
+#serviceBanner p {
+  color: #fff;
+}
 #ourServices h2 {
   text-align: center;
 }
-.our-services {
+#ourServices .fas {
+  color: #cb7d1f;
+  margin-right: 4px;
+}
+.our-services ul {
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 20px;
 }
+
 .service {
   text-align: center;
 }
@@ -564,6 +563,19 @@ footer p {
 /*============================================*/
 /*== WORK WITH US PAGE ==========================================*/
 /*============================================*/
+#contactBanner {
+  /* position: relative; */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/work-with-joyce-digital-banner.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+#contactBanner h1,
+#contactBanner p {
+  color: #fff;
+}
+
 .inquiry-form h2,
 .inquiry-form p {
   text-align: center;
@@ -583,7 +595,6 @@ footer p {
   }
   .page-header {
     position: relative;
-    margin-top: 20px;
   }
   .nav-toggle {
     display: block;
@@ -627,6 +638,16 @@ footer p {
     position: absolute;
     top: 100%;
   }
+  .hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 50px;
+  }
+  .hero-title {
+    font-size: 3rem;
+  }
 }
 @media (max-width: 36.125em) {
   h1 {
@@ -639,28 +660,11 @@ footer p {
   hr {
     margin: 50px 0;
   }
-  .logo {
-    width: 15%;
-  }
-  .nav-links {
-    width: 85%;
-  }
+
   #hero {
     margin: 30px 0;
   }
-  .hero {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    row-gap: 50px;
-    /*
-  align-items: flex-start; */
-    /* gap: 200px; */
-  }
-  .hero-title {
-    font-size: 3rem;
-  }
+
   .hero p {
     max-width: 100%;
   }
@@ -689,14 +693,22 @@ footer p {
     margin-top: 30px;
     padding-top: 30px;
   }
-  .our-services {
+  #ourServices {
+    display: flex;
     flex-direction: column;
-    justify-content: none;
-    align-items: none;
+    justify-content: center;
+    align-items: center;
+  }
+  #ourServices h2 {
+    text-align: left;
+  }
+  .our-services ul {
+    flex-direction: column;
+    align-items: flex-start;
   }
   .services-banner h1 {
     font-size: 36px;
-    line-height: 1.5;
+    line-height: 1.2;
     margin-bottom: 30px;
   }
 }
