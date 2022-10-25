@@ -197,7 +197,7 @@ button {
 }
 button a {
   color: #141517;
-  text-transform: capitalize;
+  text-transform: uppercase;
   font-weight: 200;
 }
 
@@ -467,9 +467,8 @@ hr {
   align-items: center;
 }
 
-.contact-button {
+.contact-buttons {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px 20px;
