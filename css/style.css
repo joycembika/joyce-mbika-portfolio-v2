@@ -241,6 +241,9 @@ img {
   align-items: center;
   column-gap: 20px;
 }
+.nav-links button a {
+  text-transform: uppercase;
+}
 .nav-link:hover {
   color: #cb7d1f;
 }
@@ -498,6 +501,11 @@ footer p {
   background-size: cover;
   background-repeat: no-repeat;
 }
+#serviceBanner h1 {
+  text-transform: lowercase;
+  line-height: 1.2em;
+  margin-bottom: 30px;
+}
 #serviceBanner h1,
 #serviceBanner p {
   color: #fff;
@@ -582,6 +590,10 @@ footer p {
 
 #initialProcess li {
   margin-bottom: 0.5em;
+}
+#initialProcess .fas {
+  margin-right: 5px;
+  color: #cb7d1f;
 }
 /* ==================================== */
 /* Media queries ====================== */
