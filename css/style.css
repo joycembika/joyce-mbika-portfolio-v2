@@ -144,7 +144,7 @@ body {
   line-height: 1.5;
 }
 .wrapper {
-  max-width: 1650px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 10em;
 }
@@ -226,9 +226,24 @@ button a {
   padding-top: 10px;
 }
 .logo {
-  width: 200px;
+  /* width: 200px; */
   display: flex;
   align-items: center;
+}
+.logo a {
+  font-size: 24px;
+  line-height: 1.6em;
+  font-weight: 300;
+  text-align: left;
+  text-transform: capitalize;
+  font-family: "Spectral", serif;
+}
+.logo span {
+  color: #999;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  margin-left: 15px;
 }
 img {
   width: 100%;
@@ -421,9 +436,7 @@ hr {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
 }
 
-.project-image {
-  width: 100px;
-  height: 50px;
+.project-title {
   margin-bottom: 20px;
 }
 .project-details {
@@ -458,24 +471,22 @@ hr {
 /*== CONTACT ==========================================*/
 /*============================================*/
 
-#contact p {
+#contact h2 {
   text-align: center;
+}
+
+.email {
+  margin-top: 15px;
 }
 
 .contact-info {
   width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  column-gap: 100px;
+  /* align-items: center; */
 }
 
-.contact-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px 20px;
-}
 /*============================================*/
 /*== FOOTER ==========================================*/
 /*============================================*/
@@ -490,110 +501,6 @@ footer {
 footer p {
   font-size: 11px;
   text-align: center;
-}
-/*============================================*/
-/*== SERVICES PAGE ==========================================*/
-/*============================================*/
-#serviceBanner {
-  /* position: relative; */
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../images/joyce-digital-services-banner.webp);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-#serviceBanner h1 {
-  text-transform: lowercase;
-  line-height: 1.2em;
-  margin-bottom: 30px;
-}
-#serviceBanner h1,
-#serviceBanner p {
-  color: #fff;
-}
-#ourServices h2 {
-  text-align: center;
-}
-#ourServices .fas {
-  color: #cb7d1f;
-  margin-right: 4px;
-}
-.our-services ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 20px;
-}
-
-.service {
-  text-align: center;
-}
-.packages {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 30px;
-  margin-top: 3em;
-}
-
-.packages li,
-.discount li {
-  margin-bottom: 0.5em;
-  list-style: outside;
-  margin-left: 1em;
-}
-.packages h3 {
-  text-align: center;
-  margin-bottom: 1.5em;
-}
-
-.bold-text {
-  font-weight: 500;
-}
-
-.center-align {
-  text-align: center;
-  margin-bottom: 1em;
-}
-.package-subtitle {
-  margin: 1em 0;
-}
-.discount a {
-  color: #cb7d1f;
-  text-decoration: underline;
-}
-
-.start-project {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  margin-top: 50px;
-}
-/*============================================*/
-/*== WORK WITH US PAGE ==========================================*/
-/*============================================*/
-#contactBanner {
-  /* position: relative; */
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../images/work-with-joyce-digital-banner.webp);
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-align: center;
-}
-#contactBanner h1,
-#contactBanner p {
-  color: #fff;
-}
-
-.inquiry-form h2,
-.inquiry-form p {
-  text-align: center;
-}
-
-#initialProcess li {
-  margin-bottom: 0.5em;
-}
-#initialProcess .fas {
-  margin-right: 5px;
-  color: #cb7d1f;
 }
 /* ==================================== */
 /* Media queries ====================== */
@@ -671,6 +578,9 @@ footer p {
   hr {
     margin: 50px 0;
   }
+  .logo span {
+    display: none;
+  }
 
   #hero {
     margin: 30px 0;
@@ -695,31 +605,16 @@ footer p {
   .joyce {
     width: 100%;
   }
-  /* Services Page */
-  .packages {
-    grid-template-columns: 1fr;
-  }
-  .package {
-    border-top: 1px solid #ccc;
-    margin-top: 30px;
-    padding-top: 30px;
-  }
-  #ourServices {
-    display: flex;
+  /* contact */
+  .contact-info {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    row-gap: 30px;
   }
-  #ourServices h2 {
-    text-align: left;
+  .contact-info h3 {
+    text-align: center;
   }
-  .our-services ul {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .services-banner h1 {
-    font-size: 36px;
-    line-height: 1.2;
-    margin-bottom: 30px;
+  .socials ul {
+    justify-content: center;
   }
 }
