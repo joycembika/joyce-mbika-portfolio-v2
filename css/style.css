@@ -552,6 +552,9 @@ footer p {
   .hero-title {
     font-size: 3rem;
   }
+  .hero-description {
+    width: 100%;
+  }
 }
 @media (max-width: 36.125em) {
   h1 {
