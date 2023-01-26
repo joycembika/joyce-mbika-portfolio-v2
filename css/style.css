@@ -185,7 +185,11 @@ img {
 section {
   padding: 100px 0;
 }
-
+hr {
+  height: 0.5px;
+  border: none;
+  background-color: #ccc;
+}
 .hidden {
   display: none;
 }
@@ -283,26 +287,6 @@ a:hover,
 a:active {
   color: #b35c44;
 }
-.nav-toggle {
-  width: 60px;
-  background: none;
-  border: none;
-  display: none;
-}
-.toggle-line {
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: #000;
-  border-radius: 4px;
-  margin: 3px 0;
-}
-
-hr {
-  height: 0.5px;
-  border: none;
-  background-color: #ccc;
-}
 
 /*============================================*/
 /*== HERO SECTION ==========================================*/
@@ -391,6 +375,9 @@ hr {
 
 .intro p {
   margin-bottom: 10px;
+}
+.intro a {
+  text-decoration: underline;
 }
 .skills {
   width: 60%;
@@ -546,55 +533,6 @@ footer p {
     padding: 0 20px;
     box-sizing: border-box;
   }
-  .page-header {
-    position: relative;
-  }
-  .nav-toggle {
-    display: block;
-    order: 1;
-    z-index: 100;
-  }
-
-  nav {
-    position: absolute;
-    top: 100%;
-    z-index: 100;
-  }
-  nav ul {
-    flex-direction: column;
-    align-items: flex-end;
-  }
-
-  nav {
-    display: none;
-  }
-
-  .open nav {
-    display: block;
-    z-index: 200;
-  }
-
-  nav {
-    right: 20px;
-    z-index: 110;
-  }
-  nav li {
-    margin: 15px 0;
-    width: 150px;
-  }
-  nav a {
-    text-align: right;
-  }
-  .open::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 300px;
-    background-color: #fcf5ed;
-    position: absolute;
-    top: 100%;
-    z-index: 100;
-  }
 
   .hero-title {
     font-size: 3rem;
@@ -631,6 +569,7 @@ footer p {
     flex-direction: column-reverse;
     justify-content: space-between;
     row-gap: 50px;
+    margin-top: 0;
   }
   .hero-description {
     font-size: 24px;
@@ -666,6 +605,9 @@ footer p {
   }
   .intro {
     width: 100%;
+  }
+  .intro p {
+    font-weight: 400;
   }
   .skills {
     width: 100%;
