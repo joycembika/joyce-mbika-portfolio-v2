@@ -131,6 +131,7 @@ a {
   text-decoration: none;
   color: #000205;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -166,7 +167,7 @@ h1 {
 
 h2 {
   font-size: 38px;
-  font-weight: 200;
+  font-weight: 300;
   text-align: center;
   line-height: 1.2em;
   margin-bottom: 50px;
@@ -196,6 +197,10 @@ hr {
 .alternate-background {
   background-color: #f9f2f0;
 }
+a:hover,
+a:active {
+  color: #b35c44;
+}
 button {
   background: transparent;
   border: 2px solid #b35c44;
@@ -217,10 +222,10 @@ button a {
   color: #b35c44;
   font-weight: 700;
 }
-.fa-link {
+.fab,
+.fas {
   font-size: 20px;
   font-weight: lighter;
-  color: #b35c44;
 }
 /*============================================*/
 /*== HEADER ==========================================*/
@@ -282,10 +287,6 @@ button a {
 }
 nav a {
   text-transform: capitalize;
-}
-a:hover,
-a:active {
-  color: #b35c44;
 }
 
 /*============================================*/
@@ -359,36 +360,25 @@ a:active {
 .skills {
   width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 10%;
-  margin-top: 50px;
 }
 
-.skills h3 {
-  font-size: 18px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
 .skills-list {
   font-size: 14px;
   margin-bottom: 20px;
 }
-.skills-list ul {
+.skills-list {
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 14px;
 }
-
-.skills-list .fas {
-  margin-right: 5px;
-  color: #b35c44;
-}
-.other-skills {
-  margin-top: 30px;
+.skills-list img {
+  width: 84px;
+  height: auto;
 }
 /*============================================*/
 /*== Link to services ==========================================*/
@@ -409,7 +399,6 @@ a:active {
 }
 .project {
   height: 100%;
-  /* background-color: #fffdfa; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -429,45 +418,40 @@ a:active {
   margin-bottom: 22px;
 }
 .tech-stack {
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
+  column-gap: 30px;
 }
-.tech-stack ul {
+.tech-tags {
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  flex-wrap: wrap;
+  column-gap: 10px;
 }
-.tech-stack li {
+.tech-tag {
   font-size: 12px;
   line-height: 21px;
-  padding-right: 1rem;
+  text-transform: lowercase;
+  padding: 0 7px;
+  border: 1px solid #b35c44;
+  border-radius: 2rem;
 }
-.fa-external-link-alt {
-  font-size: large;
-  font-weight: thin;
+.project-links {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 10px;
 }
-.fa-external-link-alt:hover {
-  /* background-color: #141517; */
-  padding: 0.5rem;
-  border-radius: 4px;
-}
-/*============================================*/
-/*== CMS Projects ==========================================*/
-/*============================================*/
 
-#cms-projects h2 {
-  margin-bottom: 30px;
-  text-align: center;
-}
 /*============================================*/
 /*== CONTACT ==========================================*/
 /*============================================*/
-
-#contact h2 {
-  text-align: center;
-}
 
 .email {
   margin-top: 15px;
@@ -485,19 +469,13 @@ a:active {
   justify-content: flex-start;
   column-gap: 10px;
 }
-.social-links .fab {
-  color: #b35c44;
-  font-size: 20px;
-}
+
 /*============================================*/
 /*== FOOTER ==========================================*/
 /*============================================*/
 
 footer {
   padding: 10px 0px;
-  /* background-color: #f4d9b8;
-*/
-  /* background-color: #b35c44; */
   background-color: #b35c44;
   color: #fff;
 }
