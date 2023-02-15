@@ -167,7 +167,7 @@ h1 {
 h2 {
   font-size: 38px;
   font-weight: 200;
-  text-align: left;
+  text-align: center;
   line-height: 1.2em;
   margin-bottom: 50px;
 }
@@ -351,36 +351,19 @@ a:active {
 /*============================================*/
 /*== ABOUT ME ==========================================*/
 /*============================================*/
-#about-me {
+#skills {
   width: 100%;
   box-sizing: border-box;
 }
 
-.about-me {
+.skills {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  column-gap: 10%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 10%;
   margin-top: 50px;
-}
-
-.intro {
-  width: 40%;
-}
-
-.intro h3 {
-  margin: 20px 0;
-}
-
-.intro p {
-  margin-bottom: 10px;
-}
-.intro a {
-  text-decoration: underline;
-}
-.skills {
-  width: 60%;
 }
 
 .skills h3 {
